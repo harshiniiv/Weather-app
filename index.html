@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Weather Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div class="container">
+
+    <!-- Dark Mode Button -->
+    <button class="dark-btn" onclick="toggleDarkMode()">
+      🌙
+    </button>
+
+    <h1>🌤 Weather App</h1>
+
+    <div class="search-box">
+      <input type="text" id="city" placeholder="Enter city name">
+
+      <button onclick="getWeather()">
+        Search
+      </button>
+    </div>
+
+    <!-- Current Location -->
+    <button class="location-btn" onclick="getLocationWeather()">
+      📍 Current Location
+    </button>
+
+    <div class="weather-card">
+
+      <!-- Weather Icon -->
+      <div id="weatherIcon">
+        <i class="fas fa-cloud"></i>
+      </div>
+
+      <h2 id="cityName">City Name</h2>
+
+      <h1 id="temperature">--°C</h1>
+
+      <p id="description">Weather Description</p>
+
+      <div class="details">
+
+        <div class="detail-box">
+          <p>Humidity</p>
+          <span id="humidity">--%</span>
+        </div>
+
+        <div class="detail-box">
+          <p>Wind</p>
+          <span id="wind">-- km/h</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
